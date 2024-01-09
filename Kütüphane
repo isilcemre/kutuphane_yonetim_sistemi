@@ -1,0 +1,34 @@
+#ifndef KUTUPHANE
+#define KUTUPHANE
+
+
+
+#include <stdio.h>
+#include <string.h>
+
+#define maxKitapSayisi 500
+
+
+struct kitap {
+    char isim[100];
+    char yazar[100];
+    char sayfaSayisi[5];
+    char ISBN[20];
+    int stok;
+    int oduncAlim;
+};
+
+struct kutuphane{
+    struct kitap kitaplar[maxKitapSayisi];
+    int kitapSayisi;
+};
+void kitapListeleme(struct kutuphane *kutuphane1);
+void kitapEkleme(struct kutuphane *kutuphane1, struct kitap *kitap1);
+void kitapCikarma(struct kutuphane *kutuphane1, const struct kitap *kitap1);
+void kitapAra(struct kutuphane *kutuphane1, char *araISBN);
+void oduncAlma(struct kutuphane *kutuphane1, char *oduncenISBN);
+void iadeEtme(struct kutuphane *kutuphane1, char *iadenISBN);
+int ISBNkontrol(struct kutuphane *kutuphane1, char *arananISBN);
+
+
+#endif
