@@ -6,4 +6,4 @@ Projeyi Hazırlayanlar :
 
 Işıl Cemre Sağlam  23181616040\
 Melih Ali Çağman 23181616766\
-Nisa Nur Yondemir 23181616026\
+Nisa Nur Yondemir 23181616026
