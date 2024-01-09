@@ -1,0 +1,121 @@
+#include "C:\Users\IŞIL\CLionProjects\kutuphaneH\main.h"
+
+//Aşağıda bulunan fonksiyon kütüphanede bulunan kitapları listelemek için kullanılacak olan fonksiyondur.
+void kitapListeleme(struct kutuphane *kutuphane1){
+    if(kutuphane1->kitapSayisi > 0) {
+        printf("Kutuphanedeki Kitaplar; \n");
+        for (int i = 0; i < kutuphane1->kitapSayisi; i++) {
+            printf("Kitabin Ismi: %s\n", kutuphane1->kitaplar[i].isim);
+            printf("Kitabin Yazari: %s\n", kutuphane1->kitaplar[i].yazar);
+            printf("Kitabin Sayfa Sayisi: %s\n", kutuphane1->kitaplar[i].sayfaSayisi);
+            printf("Kitabin ISBN'si: %s\n", kutuphane1->kitaplar[i].ISBN);
+            printf("Stok Durumu: %d\n", kutuphane1->kitaplar[i].stok);
+            printf("Odunc Alinma Adeti: %d\n", kutuphane1->kitaplar[i].oduncAlim);
+            printf("-----------------------------\n");
+        }
+    }
+
+    else
+        printf("Kutuphanede kitap bulunmamaktadir.");
+
+    printf("Kutuphanede %d adet farkli kitap bulunmaktadir.", kutuphane1->kitapSayisi);
+
+
+}
+
+//Aşağıda bulunan fonksiyon kütüphaneye kitap eklemek için kullanılacak olan fonksiyondur.
+void kitapEkleme(struct kutuphane *kutuphane1, struct kitap *kitap1){
+    if(kutuphane1-> kitapSayisi < maxKitapSayisi) {
+        kutuphane1->kitaplar[kutuphane1->kitapSayisi] = *kitap1;
+        kutuphane1->kitapSayisi++;
+        printf(" Yeni kitap kutuphaneye basariyla eklendi. \n");
+    }
+
+    else
+        printf("Kutuphanede yeterli yer yok. Yeni kitap eklenemedi. \n");
+
+}
+
+//Aşağıda bulunan fonksiyon kütüphaneden herhangi bir kitabı çıkarmak için kullanılacak olan fonksiyondur.
+void kitapCikarma(struct kutuphane *kutuphane1, const struct kitap *kitap1) {
+    int eleman = 0, i, j;
+
+    for (i = 0; i < kutuphane1->kitapSayisi; ++i) {
+        if (strcmp(kutuphane1->kitaplar[i].ISBN, kitap1->ISBN) == 0) {
+            eleman = 1;
+
+            // eleman = 1, cikarilacak elemanın bulunduğunu temsil ediyor. bunu kullanarak diziyi güncelleyelim.
+            for (j = i; j < kutuphane1->kitapSayisi - 1; j++) {
+                kutuphane1->kitaplar[j] = kutuphane1->kitaplar[j + 1];
+            }
+            kutuphane1->kitapSayisi--;
+            printf("Kitap basariliyla kutuphaneden cikarildi.\n");
+            break;
+        }
+    }
+
+    if (!eleman) {
+        printf("Aradiginiz kitap bulunamadi. Lütfen ISBN'yi kontrol edip tekrar yazin.\n");
+    }
+}
+
+//Aşağıda bulunan fonksiyon kütüphanedeki kitaplar arasından herhangi birini aramak için kullanılacak olan fonksiyondur.
+void kitapAra(struct kutuphane *kutuphane1, char *araISBN){
+    for(int i =0; i<kutuphane1->kitapSayisi; i++){
+        if(strcmp(kutuphane1->kitaplar[i].ISBN, araISBN)==0){
+            printf("Kitap bulundu:\n");
+            printf("Ad: %s\n", kutuphane1->kitaplar[i].isim);
+            printf("Yazar: %s\n", kutuphane1->kitaplar[i].yazar);
+            printf("Sayfa Sayisi: %s\n", kutuphane1->kitaplar[i].sayfaSayisi);
+            printf("ISBN: %s\n", kutuphane1->kitaplar[i].ISBN);
+            printf("Stok Durumu: %d\n", kutuphane1->kitaplar[i].stok);
+            printf("Odunc Alinma Sayisi: %d\n", kutuphane1->kitaplar[i].oduncAlim);
+            return;
+        }
+    }
+    printf("Aradiginiz kitap bulunamadi. Lutfen ISBN'yi kontrol edip tekrar yazin.");
+}
+
+//Aşağıda bulunan fonksiyon kütüphaneden kitap ödünç alınırken kullanılacak olan fonksiyondur.
+void oduncAlma(struct kutuphane *kutuphane1, char *oduncenISBN){
+    for(int i =0; i<kutuphane1->kitapSayisi; i++){
+        if(strcmp(kutuphane1->kitaplar[i].ISBN, oduncenISBN)==0){
+            if (kutuphane1->kitaplar[i].stok > 0){
+                kutuphane1->kitaplar[i].stok --;
+                kutuphane1->kitaplar[i].oduncAlim ++;
+                printf("Kitap odunc alindi.");
+            }
+            else
+                printf("Stokta yeterli sayida kitap bulunamadigi icin kitap odunc alinamadi.");
+        }
+
+    }
+}
+
+//Aşağıda bulunan fonksiyon kütüphaneden ödünç alınan kitap iade edilirken kullanılacak olan fonksiyondur.
+void iadeEtme(struct kutuphane *kutuphane1, char *iadenISBN){
+    for(int i =0; i< kutuphane1->kitapSayisi; i++){
+        if(strcmp(kutuphane1->kitaplar[i].ISBN, iadenISBN)==0){
+            if(kutuphane1->kitaplar[i].oduncAlim>0){
+                kutuphane1->kitaplar[i].oduncAlim --;
+                kutuphane1->kitaplar[i].stok ++;
+                printf("Kitap basari ile iade edildi.");
+                break;
+            }
+            else
+                printf("Lutfen ISBN'nizi kontrol edin ve tekrardan deneyin.");
+            break;
+        }
+    }
+}
+
+/*Aşağıda bulunan fonksiyon kütüphaneye kitap eklenirken kullanılacak ISBN'nin daha önceden kullanıp
+ * kullanılmadığını kontrol etmek amacıyla kullanılacak olan fonksiyondur.*/
+int ISBNkontrol(struct kutuphane *kutuphane1, char *arananISBN){
+    for(int i =0; i< kutuphane1->kitapSayisi; i++) {
+        if (strcmp(kutuphane1->kitaplar[i].ISBN , arananISBN) == 0) {
+            return 0;
+        } else
+            return 1;
+    }
+}
