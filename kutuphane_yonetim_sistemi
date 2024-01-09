@@ -2,6 +2,7 @@
 #include "C:\Users\IŞIL\CLionProjects\kutuphane_fonksiyonlar\main.c"
 
 
+
 // Bu kısımda programın başladığı ana fonksiyon bulunur
 int main(){
     struct kutuphane kutuphane0;
