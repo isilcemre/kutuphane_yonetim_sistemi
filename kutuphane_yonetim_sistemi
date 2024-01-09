@@ -1,0 +1,219 @@
+#include "C:\Users\IŞIL\CLionProjects\kutuphaneH\main.h"
+#include "C:\Users\IŞIL\CLionProjects\kutuphane_fonksiyonlar\main.c"
+
+
+// Bu kısımda programın başladığı ana fonksiyon bulunur
+int main(){
+    struct kutuphane kutuphane0;
+    kutuphane0.kitapSayisi = 0;
+
+    //Kütüphanenin içinde kitap bulunması için kitap eklenir.
+    struct kitap kitap0 = {"Yer Altindan Notlar" , "Fyodor Mihaylovic Dostoyevski", "140", "0000", 3 , 1 };
+    struct kitap kitap1 = {"Da Vinci Sifresi", "Dan Brown", "495", "0001", 11, 0};
+    struct kitap kitap2 = {"Seker Portakali" , "Jose Mauro De Vasconcelos", "200", "0002", 7 , 0 };
+    struct kitap kitap3 = {"Suc ve Ceza" , "Fyodor Mihaylovic Dostoyevski", "1152", "0003", 8 , 0 };
+    struct kitap kitap4 = {"Insanligimi Yitirirken" , "Osamu Dazai", "109", "0004", 1 , 2 };
+    struct kitap kitap5 = {"Kurk Mantolu Madonna" , "Sabahattin Ali", "192", "0005", 8 , 0 };
+    struct kitap kitap6 = {"Programlamayi C Ile Ogreniyorum" , "Muhammed Yorulmaz - Seher Yorulmaz", "614", "0006", 6 , 0 };
+    struct kitap kitap7 = {"Hayta" , "Anil Basili", "128", "0007", 3 , 0 };
+    struct kitap kitap8 = {"İcimizdeki Seytan" , "Sabahattin Ali", "267", "0008", 6 , 0 };
+    struct kitap kitap9 = {"Tutunamayanlar" , "Oguz Atay", "726", "0009", 3 , 0 };
+    struct kitap kitap10 = {"Korkuyu Beklerken" , "Oguz Atay", "202", "0010", 1 , 1 };
+    struct kitap kitap11 = {"Aylak Adam", "Yusuf Atilgan", "192", "0011", 9, 0};
+    struct kitap kitap12 = {"Mai ve Siyah" , "Halit Ziya Usakligil", "255", "0012", 6 , 0 };
+    struct kitap kitap13 = {"Anayurt Oteli" , "Yusuf Atilgan", "200", "0013", 10 , 0 };
+    struct kitap kitap14 = {"Semerkant" , "Amin Maalouf", "318", "0014", 2 , 2 };
+    struct kitap kitap15 = {"Gülün Adi" , "Umberto Eco", "732", "0015", 8 , 0 };
+    struct kitap kitap16 = {"Zeytindagi" , "Falih Rifki Atay", "176", "0016", 6 , 0 };
+    struct kitap kitap17 = {"NUTUK" , "MUSTAFA KEMAL ATATURK", "1096", "0017", 1981 , 0 };
+    struct kitap kitap18 = {"Insanlar" , "Matt Haig", "296", "0018", 6 , 0 };
+    struct kitap kitap19 = {"Ince Memed I" , "Yasar Kemal", "436", "0019", 3 , 0 };
+    struct kitap kitap20 = {"Ince Memed II" , "Yasar Kemal", "459", "0020", 3 , 1 };
+    struct kitap kitap21 = {"Ince Memed III", "Yasar Kemal", "629", "0021", 11, 0};
+    struct kitap kitap22 = {"Ince Memed IV" , "Yasar Kemal", "639", "0022", 7 , 0 };
+    struct kitap kitap23 = {"Kayip Tanrilar Ulkesi" , "Ahmet Umit", "505", "0023", 8 , 0 };
+    struct kitap kitap24 = {"Kirlangic Cigligi" , "Ahmet Umit", "436", "0024", 1 , 2 };
+    struct kitap kitap25 = {"Sis Ve Gece" , "Ahmet Umit", "192", "0025", 8 , 0 };
+    struct kitap kitap26 = {"Kavim" , "Ahmet Umit", "614", "0026", 6 , 0 };
+    struct kitap kitap27 = {"Sultani Oldurmek" , "Ahmet Umit", "152", "0027", 3 , 0 };
+    struct kitap kitap28 = {"Balikci Ve Oglu" , "Zulfu Livaneli", "128", "0028", 3 , 0 };
+    struct kitap kitap29 = {"Huzursuzluk" , "Zulfu Livaneli", "160", "0039", 3 , 0 };
+    struct kitap kitap30 = {"Serenad" , "Zulfu Livaneli", "168", "0030", 3 , 1 };
+    struct kitap kitap31 = {"Kardesimin Hikayesi", "Zulfu Livaneli", "136", "0031", 11, 0};
+    struct kitap kitap32 = {"Son Ada" , "Zulfu Livaneli", "200", "0032", 7 , 0 };
+    struct kitap kitap33 = {"Kambur" , "Sule Gurbuz", "68", "0033", 8 , 0 };
+    struct kitap kitap34 = {"Coskuyl Olmek" , "Sule Gurbuz", "72", "0034", 1 , 2 };
+    struct kitap kitap35 = {"Oyle Miymis" , "Sule Gurbuz", "96", "0035", 8 , 0 };
+    struct kitap kitap36 = {"Kiyamet Emeklisi I" , "Sule Gurbuz", "401", "0036", 6 , 0 };
+    struct kitap kitap37 = {"Kiyamet Emeklisi II" , "Sule Gurbuz", "378", "0037", 3 , 0 };
+    struct kitap kitap38 = {"Cehenneme Ovgu" , "Gunduz Vassaf", "251", "0038", 3 , 0 };
+    struct kitap kitap39 = {"Cennetin Dibi" , "Gunduz Vassaf", "280", "0039", 3 , 0 };
+
+
+
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap0;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap1;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap2;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap3;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap4;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap5;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap6;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap7;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap8;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap9;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap10;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap11;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap12;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap13;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap14;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap15;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap16;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap17;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap18;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap19;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap20;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap21;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap22;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap23;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap24;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap25;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap26;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap27;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap28;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap29;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap30;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap31;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap32;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap33;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap34;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap35;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap36;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap37;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap38;
+    kutuphane0.kitaplar[kutuphane0.kitapSayisi++] = kitap39;
+
+    char secim;
+    struct kitap yeniKitap;
+    struct kitap eskiKitap;
+
+
+    //Aşağıda, kullanıcı işlemi bitirmek isteyene kadar işlem yapmaya devam edebilmesi için bir döngü bulunur.
+    do{
+        printf("\nKutuphane Yonetim Sistemi\n");
+        printf("1. Kitap Listeleme\n");
+        printf("2. Kitap Ekleme\n");
+        printf("3. Kitap Cikarma\n");
+        printf("4. Kitap Arama\n");
+        printf("5. Kitap Odunc Alma\n");
+        printf("6. Kitap Iade Etme\n");
+        printf("7. Cikis\n");
+        printf("Yapmak istediginiz Islemi Seciniz: ");
+        scanf("%d", &secim);
+
+        switch (secim) {
+            case 1:
+                //Kullanıcı kitapları listelemek istediğinde çalışacak olan kısım.
+                kitapListeleme(&kutuphane0);
+                break;
+
+            case 2:
+                //Kullanıcı kitap eklemek istediğinde çalışacak olan kısım.
+                printf("Kitabin Ismi: ");
+                getchar();
+                fgets(yeniKitap.isim, sizeof (yeniKitap.isim), stdin);
+                yeniKitap.isim[strcspn(yeniKitap.isim, "\n")] ='\0';
+                // '\n' karakterini kaldırır.
+
+                printf("Kitabin Yazari: ");
+                fgets(yeniKitap.yazar, sizeof(yeniKitap.yazar), stdin);
+                yeniKitap.yazar[strcspn(yeniKitap.yazar, "\n")] ='\0';
+                // '\n' karakterini kaldırır.
+
+                printf("Kitabin Sayfa Sayisi: ");
+                scanf("%s", yeniKitap.sayfaSayisi);
+
+                //Aşağıda, ISBN nin daha önceden kullanılıp kullanılmadığını kontrol eden bir döngü bulunmaktadır.
+                do {
+                    printf("Kitabin ISBN'si: ");
+                    scanf("%s", yeniKitap.ISBN);
+
+                    if(!(ISBNkontrol(&kutuphane0 , yeniKitap.ISBN)))
+                        printf("Girdiginiz ISBN daha onceden kullanilmis. Baska bir ISBN deneyiniz. \n");
+                }
+                while (!ISBNkontrol(&kutuphane0, yeniKitap.ISBN));
+
+                printf("Kitabin Stok'u:");
+                scanf("%d", &yeniKitap.stok);
+
+
+                yeniKitap.oduncAlim= 0;
+
+                kitapEkleme(&kutuphane0, &yeniKitap);
+                break;
+
+            case 3 :
+                //Kullanıcı kütüphaneden kitap çıkarmak istediğinde çalışacak olan kısım.
+                printf("Cikarilacak Kitabin ISBN'sini Giriniz:");
+                scanf("%s", eskiKitap.ISBN);
+
+                kitapCikarma(&kutuphane0, &eskiKitap);
+                break;
+
+            case 4:
+                //Kullanıcı kitap aramak istediğinde çalışacak olan kısım.
+                printf("Aramak Istediginiz Kitabin ISBN'sini Giriniz:");
+                char arananISBN[20];
+                scanf("%s", arananISBN);
+
+                kitapAra(&kutuphane0, arananISBN);
+                break;
+
+            case 5:
+                //Kullanıcı kitap ödünç almak istediğinde çalışacak olan kısım.
+                printf("Odunc Almak Istediginiz Kitabin ISBN'sini Giriniz:");
+                char oduncAlISBN[20];
+                scanf("%s", oduncAlISBN);
+
+                oduncAlma(&kutuphane0, oduncAlISBN);
+                break;
+
+            case 6:
+                //Kullanıcı ödünç aldığı kitabı iade etmek istediğinde çalışacak olan kısım.
+                printf("Iade Etmek Istediginiz Kitabin ISBN'sini Giriniz:");
+                char iadeISBN[20];
+                scanf("%s", iadeISBN);
+
+                iadeEtme(&kutuphane0, iadeISBN);
+                break;
+
+            case 7:
+                //Kullanıcı işlemlerini bitirip çıkış yapmak istediğinde çalışacak olan kısım.
+                printf("Programdan cikiliyor...\n");
+                break;
+
+
+            default:
+                printf("Gecersiz secim. Tekrar deneyin.\n");
+
+        }
+    }
+    while(!(secim==7));
+
+
+    // Kütüphane verilerini dosyaya kaydet
+    FILE *dosya = fopen("kutuphane.txt", "w");
+    if (dosya != NULL) {
+        //Döngü içinde, fprintf fonksiyonu, veriyi dosyaya yazmak için kullanılır.
+        for (int i = 0; i < kutuphane0.kitapSayisi; ++i) {
+            fprintf(dosya, "%s %s %s %d %d\n", kutuphane0.kitaplar[i].isim, kutuphane0.kitaplar[i].yazar,
+                    kutuphane0.kitaplar[i].ISBN, kutuphane0.kitaplar[i].stok, kutuphane0.kitaplar[i].oduncAlim);
+        }
+        fclose(dosya);
+        printf("Kutuphane verileri dosyaya kaydedildi.\n");
+
+    } else {
+        printf("Dosyaya yazma hatasi.\n");
+    }
+
+    return 0;
+}
