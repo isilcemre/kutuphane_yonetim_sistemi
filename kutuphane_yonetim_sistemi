@@ -26,7 +26,7 @@ int main(){
     struct kitap kitap14 = {"Semerkant" , "Amin Maalouf", "318", "0014", 2 , 2 };
     struct kitap kitap15 = {"Gülün Adi" , "Umberto Eco", "732", "0015", 8 , 0 };
     struct kitap kitap16 = {"Zeytindagi" , "Falih Rifki Atay", "176", "0016", 6 , 0 };
-    struct kitap kitap17 = {"NUTUK" , "MUSTAFA KEMAL ATATURK", "1096", "0017", 1981 , 0 };
+    struct kitap kitap17 = {"NUTUK" , "MUSTAFA KEMAL ATATURK", "1096", "0017", 1881 , 0 };
     struct kitap kitap18 = {"Insanlar" , "Matt Haig", "296", "0018", 6 , 0 };
     struct kitap kitap19 = {"Ince Memed I" , "Yasar Kemal", "436", "0019", 3 , 0 };
     struct kitap kitap20 = {"Ince Memed II" , "Yasar Kemal", "459", "0020", 3 , 1 };
